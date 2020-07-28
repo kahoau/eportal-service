@@ -8,7 +8,7 @@
 		<version>2.2.6.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.serai</groupId>
+	<groupId>com.eportal</groupId>
 	<artifactId>eportal-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>eportal-service</name>

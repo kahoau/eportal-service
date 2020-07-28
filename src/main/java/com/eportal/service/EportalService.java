@@ -1,6 +1,14 @@
 package com.eportal.service;
 
 
+import net.sf.jasperreports.engine.JRException;
+
+import java.io.OutputStream;
+
 public interface EportalService {
-    boolean generatePdf(String fileName);
+    void exportPdfJasper() throws JRException;
+
+    void exportPdfFreemarker() throws Exception;
+
+    OutputStream freemarkerToOutputStream() throws Exception;
 }

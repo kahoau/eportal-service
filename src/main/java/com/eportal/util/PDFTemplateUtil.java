@@ -18,7 +18,7 @@ public class PDFTemplateUtil {
      * @param templateFileName template file name
      * @throws Exception
      */
-    public static ByteArrayOutputStream createPDF(Map<String,Object> data, String templateFileName) throws Exception {
+    public static OutputStream createPDF(Map<String,Object> data, String templateFileName) throws Exception {
         // Create a FreeMarker instance, responsible for managing the Configuration instance of the FreeMarker template
         Configuration cfg = new Configuration(Configuration.DEFAULT_INCOMPATIBLE_IMPROVEMENTS);
         // Specify the location of the FreeMarker template file
@@ -49,7 +49,7 @@ public class PDFTemplateUtil {
             renderer.createPDF(out, false);
             renderer.finishPDF();
             out.flush();
-            return (ByteArrayOutputStream)out;
+            return out;
         } finally {
             if(out != null){
                 out.close();
