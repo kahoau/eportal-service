@@ -52,6 +52,6 @@ public class EportalServiceImpl implements EportalService {
         detailList.add(new PDFDataTest(222222,"test","test","test","test"));
         data.put("detailList", detailList);
 
-        return PDFTemplateUtil.createPDF(data, "dashboard.ftl");
+        return PDFTemplateUtil.createPDF(data, "pdf-template.ftl");
     }
 }

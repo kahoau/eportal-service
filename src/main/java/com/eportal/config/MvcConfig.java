@@ -1,12 +1,13 @@
 package com.eportal.config;
 
+import com.eportal.servlet.CaptchaServlet;
 import freemarker.template.TemplateException;
+import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.ui.freemarker.FreeMarkerConfigurationFactory;
 import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer;
 import org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver;
 
@@ -21,6 +22,7 @@ public class MvcConfig implements WebMvcConfigurer {
         resolver.setPrefix("");
         resolver.setSuffix(".ftl");
         resolver.setContentType("text/html; charset=UTF-8");
+        resolver.setRequestContextAttribute("request");
         return resolver;
     }
 
@@ -32,5 +34,13 @@ public class MvcConfig implements WebMvcConfigurer {
         FreeMarkerConfigurer result = new FreeMarkerConfigurer();
         result.setConfiguration(factory.createConfiguration());
         return result;
+    }
+
+    @Bean
+    ServletRegistrationBean captchaServletRegistration () {
+        ServletRegistrationBean srb = new ServletRegistrationBean();
+        srb.setServlet(new CaptchaServlet());
+        srb.addUrlMappings("/captcha-servlet");
+        return srb;
     }
 }
