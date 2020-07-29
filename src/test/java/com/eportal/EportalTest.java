@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.io.IOException;
 
 
 @Slf4j
@@ -20,7 +21,7 @@ public class EportalTest {
 
 
     @Test
-    public void exportPdfJasperTest() throws JRException {
+    public void exportPdfJasperTest() throws JRException, IOException {
         eportalService.exportPdfJasper();
     }
 

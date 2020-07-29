@@ -27,7 +27,7 @@ public class PDFTemplateUtil {
         OutputStream out = new ByteArrayOutputStream();
         try {
             // Set the font style in css (temporary only supports Song and Black). Otherwise, Chinese does not display.
-            renderer.getFontResolver().addFont("/templates/font/simsun.ttc", BaseFont.IDENTITY_H, BaseFont.NOT_EMBEDDED);
+            // renderer.getFontResolver().addFont("/templates/font/simsun.ttc", BaseFont.IDENTITY_H, BaseFont.NOT_EMBEDDED);
             // Set the encoding format of the template
             cfg.setEncoding(Locale.CHINA, "UTF-8");
             // Get the template file

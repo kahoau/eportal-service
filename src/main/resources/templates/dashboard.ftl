@@ -6,6 +6,8 @@
 </head>
 
 <body>
-    dashboard
+    <a href="/pdf/export/freemarker">export freemarker template to pdf</a>
+    <br/>
+    <a href="/pdf/export/jasper">export jasper template to pdf</a>
 </body>
 </html>
