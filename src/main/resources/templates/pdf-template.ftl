@@ -47,7 +47,7 @@
 <!-- Foreword start -->
 <section class="preface">
     <p>respected user:</p>
-    <p class="content">Content content content content content content content content content content content content content content content content content content content content content</p>
+    <p class="content">iTextPDF无法显示中文的解决办法</p>
 </section>
 <!-- Foreword end -->
 
@@ -57,7 +57,7 @@
     <table border="1" cellspacing="0" cellpadding="0">
         <tr>
             <td>The number of this month</td>
-            <td>Comparison of quantity in the past three months</td>
+            <td>再多23間餐廳上疫榜 1名確診者曾到訪10間麥當勞</td>
         </tr>
         <tr>
             <td>${curr}</td>

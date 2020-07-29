@@ -5,9 +5,6 @@
 ```
 mvn clean install                      # via intellij 
 docker build -t kahoau/eportal-repo -f ./Dockerfile .  # rick au's docker hub
-
-
-
 docker login
 docker push kahoau/eportal-repo:latest
 ```
@@ -42,7 +39,7 @@ sudo docker run -d -p 80:8080 kahoau/eportal-repo
 ```
 
 ## login page
-http://ec2-54-149-xxx-yyy.us-west-2.compute.amazonaws.com/login
+http://ec2-54-149-xxx-yyy.us-west-2.compute.amazonaws.com
 
 
 ## reference 
