@@ -22,7 +22,6 @@ public class MvcConfig implements WebMvcConfigurer {
         resolver.setPrefix("");
         resolver.setSuffix(".ftl");
         resolver.setContentType("text/html; charset=UTF-8");
-        resolver.setRequestContextAttribute("request");
         return resolver;
     }
 

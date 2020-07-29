@@ -6,9 +6,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
-import org.springframework.ui.Model;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
@@ -17,7 +15,13 @@ import java.util.HashMap;
 @Controller
 @Slf4j
 public class LoginController {
-    @ResponseBody
+    @GetMapping(value="/")
+    public ModelAndView landing() {
+        HashMap<String, Object> params = new HashMap<String, Object>();
+
+        return new ModelAndView("login", params);
+    }
+
     @GetMapping(value="/login")
     public ModelAndView loginGet() {
         HashMap<String, Object> params = new HashMap<String, Object>();
@@ -32,6 +36,8 @@ public class LoginController {
         HashMap<String, Object> params = new HashMap<String, Object>();
         if (user.getCaptcha().equals(request.getSession().getAttribute("captcha"))) {
             return new ModelAndView("redirect:dashboard", params);
+        } else {
+            params.put("errorMessage", "Captcha is not correct");
         }
         return new ModelAndView("login", params);
     }

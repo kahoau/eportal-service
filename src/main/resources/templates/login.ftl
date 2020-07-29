@@ -14,6 +14,9 @@
                     <strong>Login</strong>
                 </div>
                 <div class="panel-body">
+                    <#if errorMessage?? && errorMessage != "">
+                        <div class="alert alert-block alert-error bg-danger">${errorMessage}</div>
+                    </#if>
                     <form method="POST" action="/login" class="form-signin form-horizontal">
                         <div class="form-group">
                             <div class="col-md-12">
