@@ -49,3 +49,8 @@ https://www.programmersought.com/article/3267527859/
 ### captcha
 https://www.youtube.com/watch?v=wF72t9dSBU8
 https://github.com/mightyjava/springboot-captcha-cage
+
+### authentication
+https://kknews.cc/code/2y8mrre.html  jwt, spring security
+https://www.concretepage.com/spring/spring-security/spring-mvc-security-jdbc-userdetailsservice-database-authentication
+https://octoperf.com/blog/2018/03/08/securing-rest-api-spring-security/
