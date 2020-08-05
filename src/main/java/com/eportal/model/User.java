@@ -11,6 +11,6 @@ import lombok.ToString;
 @ToString
 public class User {
     private String email;
-    private String password;
-    private String captcha;
+    private String invitationCode;
+    private String otp;
 }

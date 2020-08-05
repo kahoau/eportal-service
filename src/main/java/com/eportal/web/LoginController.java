@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
 
 
@@ -30,16 +29,11 @@ public class LoginController {
     }
 
     @PostMapping(value="/login")
-    public ModelAndView loginPost(User user, HttpServletRequest request) {
-        log.info("user: {}", user);
-
+    public ModelAndView loginPost(User user) {
+        log.info("captcha: {}", user);
         HashMap<String, Object> params = new HashMap<String, Object>();
-        if (user.getCaptcha().equals(request.getSession().getAttribute("captcha"))) {
-            return new ModelAndView("redirect:dashboard", params);
-        } else {
-            params.put("errorMessage", "Captcha is not correct");
-        }
-        return new ModelAndView("login", params);
+
+        return new ModelAndView("dashboard", params);
     }
 
     @GetMapping(value="/dashboard")
