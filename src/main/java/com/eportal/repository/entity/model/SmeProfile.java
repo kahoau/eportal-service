@@ -19,7 +19,9 @@ public class SmeProfile extends BaseEntity {
     @Column(name = "COMPANY_NAME_CHN", nullable = true)
     private String companyNameChn;
 
+    @Column(name = "STATUS", nullable = false)
+    private String status;
 
-    @OneToOne(mappedBy = "smeProfile")
-    private Customer customer;
+//    @OneToOne(mappedBy = "smeProfile")
+//    private Customer customer;
 }
