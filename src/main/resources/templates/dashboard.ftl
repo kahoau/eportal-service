@@ -6,9 +6,9 @@
 </head>
 
 <body>
-    <a href="/pdf/export/freemarker">export freemarker template to pdf</a>
+    <a href="/api/pdf/export/freemarker">export freemarker template to pdf</a>
     <br/>
     <br/>
-    <a href="/pdf/export/jasper">export jasper template to pdf</a>
+    <a href="/api/pdf/export/jasper">export jasper template to pdf</a>
 </body>
 </html>

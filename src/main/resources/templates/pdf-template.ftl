@@ -46,7 +46,7 @@
 
 <!-- Foreword start -->
 <section class="preface">
-    <p>respected user:</p>
+    <p>respected customerVO:</p>
     <p class="content">iTextPDF无法显示中文的解决办法</p>
 </section>
 <!-- Foreword end -->

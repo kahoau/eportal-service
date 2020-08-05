@@ -1,7 +1,7 @@
 package com.eportal.web;
 
 
-import com.eportal.model.User;
+import com.eportal.vo.CustomerVO;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -29,8 +29,8 @@ public class LoginController {
     }
 
     @PostMapping(value="/login")
-    public ModelAndView loginPost(User user) {
-        log.info("captcha: {}", user);
+    public ModelAndView loginPost(CustomerVO customerVO) {
+        log.info("captcha: {}", customerVO);
         HashMap<String, Object> params = new HashMap<String, Object>();
 
         return new ModelAndView("dashboard", params);

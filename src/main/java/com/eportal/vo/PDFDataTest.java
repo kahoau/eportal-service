@@ -1,4 +1,4 @@
-package com.eportal.model;
+package com.eportal.vo;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

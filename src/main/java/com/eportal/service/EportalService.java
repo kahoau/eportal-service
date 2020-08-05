@@ -1,11 +1,7 @@
 package com.eportal.service;
 
-
-import net.sf.jasperreports.engine.JRException;
-
+import com.eportal.repository.entity.model.Customer;
 
 public interface EportalService {
-    byte[] freemarkerToByteArray() throws Exception;
-
-    byte[] jrxmlToByteArray() throws JRException;
+    Customer findCustomerByInvitationCode(String invitationCode);
 }

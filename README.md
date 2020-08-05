@@ -58,10 +58,10 @@ Go https://www.youtube.com/watch?v=1fnPCWBikYQ&t=143s
 
 to download the key pair for ssh 
 
-### ssh to ec2
+### SSH to ec2
 ```
 chmod 400 eportal-keypair.pem # first time only
-ssh -i "eportal-keypair.pem" ec2-user@ec2-54-149-212-13.us-west-2.compute.amazonaws.com
+ssh -i "eportal-keypair.pem" ec2-customerVO@ec2-54-149-212-13.us-west-2.compute.amazonaws.com
 ```
 
 ### Start docker and the container with the image previously uploaded to docker hub
@@ -72,7 +72,7 @@ sudo service docker start or # systemctl enable docker.service
 sudo docker run -d -p 80:8080 kahoau/eportal-service
 ```
 
-### running microk8s on ec2
+### Running microk8s on ec2
 
 ```
 sudo snap install microk8s --classic --channel=1.18/stable 
@@ -99,6 +99,12 @@ microk8s.kubectl apply -f deployment.yml
 # microk8s.enable dns dashboard
 ```
 
+## Local database
+
+http://localhost:8080/h2-console
+
+datasource url: jdbc:h2:mem:eportaldb
+password: empty_string
 
 ## Reference 
 ### export pdf by freemarker
